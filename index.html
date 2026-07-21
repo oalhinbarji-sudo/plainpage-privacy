@@ -1,23 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Plainpage — Privacy Policy</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Plainpage — distraction-free markdown writing</title>
+<meta name="description" content="Plainpage is a distraction-free markdown writer for Mac, iPhone, and Android. Focus mode, typewriter scrolling, style check, and live preview. One purchase, every platform.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; max-width: 680px; margin: 60px auto; padding: 0 20px; color: #2B2B28; background: #FBFAF8; line-height: 1.6; }
-  h1 { font-size: 1.6em; }
-  p { margin: 1em 0; }
-  footer { margin-top: 3em; font-size: 0.85em; color: #9A968D; }
+:root {
+  --bg: #fbfaf8;
+  --fg: #2b2b28;
+  --fg-dim: #6f6b62;
+  --fg-faint: #9a968d;
+  --border: #e7e3db;
+  --accent: #c46b3e;
+  --accent-dark: #2b221c;
+  --card-bg: #ffffff;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+h1, h2, h3 { font-family: 'Lora', Georgia, serif; font-weight: 600; }
+a { color: var(--accent); text-decoration: none; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+nav { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; }
+.brand { display: flex; align-items: center; gap: 10px; }
+.logo { width: 34px; height: 34px; border-radius: 9px; background: linear-gradient(160deg, var(--accent-dark), var(--accent)); display: flex; align-items: center; justify-content: center; }
+.logo svg { width: 18px; height: 18px; }
+.brand span { font-family: 'Lora', serif; font-weight: 600; font-size: 19px; }
+.nav-links { display: flex; gap: 28px; font-size: 14px; color: var(--fg-dim); }
+.nav-links a:hover { color: var(--fg); }
+.hero { padding: 70px 0 40px; text-align: center; }
+.hero h1 { font-size: 44px; line-height: 1.2; max-width: 700px; margin: 0 auto 18px; }
+.hero p.sub { font-size: 18px; color: var(--fg-dim); max-width: 520px; margin: 0 auto 30px; }
+.cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 50px; }
+.btn { display: inline-block; padding: 13px 24px; border-radius: 8px; font-size: 15px; font-weight: 500; border: 1px solid var(--border); }
+.btn-primary { background: var(--fg); color: #fff; border-color: var(--fg); }
+.btn-primary:hover { background: #000; }
+.btn-secondary { background: transparent; color: var(--fg); }
+.btn-secondary:hover { border-color: var(--fg); }
+.mock { max-width: 760px; margin: 0 auto; background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; box-shadow: 0 20px 60px rgba(43,34,28,0.08); }
+.mock-bar { display: flex; align-items: center; gap: 6px; padding: 12px 16px; border-bottom: 1px solid var(--border); }
+.mock-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--border); }
+.mock-title { flex: 1; text-align: center; font-size: 12px; color: var(--fg-faint); }
+.mock-body { padding: 40px 60px; text-align: left; }
+.mock-body .mh1 { font-size: 26px; font-weight: 600; margin-bottom: 14px; font-family: 'Lora', serif; }
+.mock-body .mh1 .mk { color: var(--fg-faint); opacity: .6; font-weight: 400; font-family: 'Inter', sans-serif; }
+.mock-body p { font-size: 15px; color: var(--fg); margin-bottom: 10px; }
+.mock-body .cursor { display: inline-block; width: 2px; height: 16px; background: var(--accent); vertical-align: middle; }
+.section { padding: 70px 0; }
+.section h2 { font-size: 30px; text-align: center; margin-bottom: 12px; }
+.section .lead { text-align: center; color: var(--fg-dim); max-width: 480px; margin: 0 auto 44px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+.card .icon { width: 34px; height: 34px; border-radius: 8px; background: #f4ede6; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; font-size: 16px; }
+.card h3 { font-size: 16px; font-family: 'Inter', sans-serif; font-weight: 600; margin-bottom: 6px; }
+.card p { font-size: 14px; color: var(--fg-dim); }
+.pricing-card { max-width: 480px; margin: 0 auto; background: var(--accent-dark); color: #fff; border-radius: 16px; padding: 44px 40px; text-align: center; }
+.pricing-card .price { font-size: 52px; font-family: 'Lora', serif; font-weight: 600; margin: 10px 0 4px; }
+.pricing-card .price span { font-size: 16px; font-weight: 400; opacity: .7; }
+.pricing-card p.note { opacity: .75; font-size: 14px; margin-bottom: 24px; }
+.pricing-card ul { list-style: none; text-align: left; max-width: 300px; margin: 0 auto 28px; font-size: 14px; }
+.pricing-card li { padding: 7px 0; opacity: .9; }
+.pricing-card li:before { content: "✓ "; color: var(--accent); font-weight: 700; }
+.compare { text-align: center; margin-top: 22px; font-size: 13px; color: var(--fg-dim); }
+.dl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 10px; }
+.dl-card { border: 1px solid var(--border); border-radius: 12px; padding: 26px 22px; text-align: center; background: var(--card-bg); }
+.dl-card h3 { font-size: 16px; margin-bottom: 6px; font-family: 'Inter', sans-serif; font-weight: 600; }
+.dl-card p { font-size: 13px; color: var(--fg-dim); margin-bottom: 16px; min-height: 34px; }
+.badge { display: inline-block; font-size: 11px; padding: 3px 9px; border-radius: 20px; background: #f4ede6; color: var(--accent); font-weight: 600; margin-bottom: 10px; }
+footer { border-top: 1px solid var(--border); padding: 30px 0; text-align: center; font-size: 13px; color: var(--fg-faint); }
+footer a { color: var(--fg-dim); margin: 0 8px; }
+@media (max-width: 720px) {
+  .grid, .dl-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 32px; }
+  .mock-body { padding: 26px 22px; }
+  .nav-links { display: none; }
+}
 </style>
 </head>
 <body>
-<h1>Plainpage — Privacy Policy</h1>
-<p><strong>Last updated: July 21, 2026</strong></p>
-<p>Plainpage does not collect, store, or transmit any personal data.</p>
-<p>All documents you create in Plainpage are stored locally on your own device (or in a folder you choose). Plainpage does not use analytics, does not connect to any server, does not require an account, and does not share any information with third parties.</p>
-<p>Because nothing is collected, there is nothing to request, export, or delete on our end — your data never leaves your device unless you choose to export or share it yourself.</p>
-<p>If this policy ever changes, the update will be posted on this page.</p>
-<footer>Contact: ph.omaralhinbarji@gmail.com</footer>
+<div class="wrap">
+  <nav>
+    <div class="brand">
+      <div class="logo"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="3" width="14" height="18" rx="2" fill="#fbfaf8"/><rect x="8" y="7" width="8" height="1.4" rx="0.7" fill="#2b221c"/><rect x="8" y="10" width="8" height="1.4" rx="0.7" fill="#2b221c"/><rect x="8" y="13" width="5" height="1.4" rx="0.7" fill="#2b221c"/><rect x="14" y="13" width="1.4" height="4" fill="#c46b3e"/></svg></div>
+      <span>Plainpage</span>
+    </div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#download">Download</a>
+      <a href="privacy/">Privacy</a>
+    </div>
+  </nav>
+  <section class="hero">
+    <h1>Distraction-free markdown writing, on every device you own.</h1>
+    <p class="sub">Plainpage is a calm, focused writing app for Mac, iPhone, and Android — inspired by iA Writer, priced like it should be.</p>
+    <div class="cta-row">
+      <a href="#pricing" class="btn btn-primary">Get Plainpage — $14.99</a>
+      <a href="#features" class="btn btn-secondary">See what it does</a>
+    </div>
+    <div class="mock">
+      <div class="mock-bar">
+        <div class="mock-dot"></div><div class="mock-dot"></div><div class="mock-dot"></div>
+        <div class="mock-title">Welcome.md</div>
+      </div>
+      <div class="mock-body">
+        <div class="mh1"><span class="mk"># </span>Welcome to Plainpage</div>
+        <p>A distraction-free markdown writer, inspired by iA Writer.</p>
+        <p>Start typing, or open a folder from the Library to browse your documents.<span class="cursor"></span></p>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="features">
+    <h2>Everything a writer needs. Nothing they don't.</h2>
+    <p class="lead">Six features, refined instead of piled on.</p>
+    <div class="grid">
+      <div class="card"><div class="icon">◎</div><h3>Focus mode</h3><p>Dims every paragraph but the one you're writing, so your eye never wanders.</p></div>
+      <div class="card"><div class="icon">≣</div><h3>Typewriter scrolling</h3><p>Keeps your current line centered — the page moves, not your eyes.</p></div>
+      <div class="card"><div class="icon">S̲</div><h3>Style check</h3><p>Quietly flags adverbs, filler words, clichés, and passive voice as you type.</p></div>
+      <div class="card"><div class="icon">P·O·S</div><h3>Syntax control</h3><p>Colors your writing by part of speech — see your sentence structure at a glance.</p></div>
+      <div class="card"><div class="icon">◫</div><h3>Split view</h3><p>Live-rendered preview alongside your raw markdown, always in sync.</p></div>
+      <div class="card"><div class="icon">⌘</div><h3>Everywhere</h3><p>Mac, iPhone, and Android — your documents, your own device, no account required.</p></div>
+    </div>
+  </section>
+  <section class="section" id="pricing">
+    <h2>One price. Every platform.</h2>
+    <p class="lead">No subscription. No per-platform charges. Buy once, use everywhere.</p>
+    <div class="pricing-card">
+      <p class="note">Universal license</p>
+      <div class="price">$14.99<span> one time</span></div>
+      <ul>
+        <li>Mac, iPhone, and Android included</li>
+        <li>All features unlocked, always</li>
+        <li>Free updates, no renewal</li>
+        <li>Your files stay on your device</li>
+      </ul>
+      <a href="#download" class="btn btn-primary" style="background:#fff; color:var(--accent-dark); border-color:#fff;">Download Plainpage</a>
+    </div>
+    <p class="compare">iA Writer charges separately per platform — Mac, iOS, and Windows add up to $129+. Plainpage is $14.99, once, for all of yours.</p>
+  </section>
+  <section class="section" id="download">
+    <h2>Get Plainpage</h2>
+    <p class="lead">Pick your platform.</p>
+    <div class="dl-grid">
+      <div class="dl-card">
+        <h3>Mac</h3>
+        <p>Mac App Store submission in progress.</p>
+        <span class="badge">Coming soon</span>
+      </div>
+      <div class="dl-card">
+        <h3>Android</h3>
+        <p>Try today's build directly, or wait for the Play Store listing.</p>
+        <span class="badge">Available now</span>
+      </div>
+      <div class="dl-card">
+        <h3>iPhone &amp; iPad</h3>
+        <p>App Store submission in progress.</p>
+        <span class="badge">Coming soon</span>
+      </div>
+    </div>
+  </section>
+</div>
+<footer>
+  <div class="wrap">
+    <div><a href="privacy/">Privacy policy</a><a href="mailto:ph.omaralhinbarji@gmail.com">Contact</a></div>
+    <p style="margin-top:10px;">&copy; 2026 Plainpage</p>
+  </div>
+</footer>
 </body>
 </html>
